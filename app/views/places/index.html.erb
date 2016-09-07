@@ -20,8 +20,15 @@
             <small><%= place.comments.order("id ASC").last.user.email %></small>
         </blockquote>
       </div>
-    <% end %>   
+    <% end %> 
 
+      <% if place.photos.present? %>
+        <div class="booyah-box col-xs-12 col-sm-4">
+          <%= image_tag place.photos.order("id ASC").first.picture, class: 'img-responsive' %>
+          <%= place.photos.order("id ASC").first.caption %>
+        </div>    
+      <% end %>
+      
   </div>
 <% end %>    
 
