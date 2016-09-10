@@ -69,7 +69,7 @@
             <%= place.comments.order("id ASC").last.message %>
             <small><%= place.comments.order("id ASC").last.user.email %></small>
         </blockquote>
-      </div>
+    </div>
     <% end %> 
 
       <% if place.photos.present? %>
